@@ -1,0 +1,21 @@
+# Maven build directory
+target/
+**/target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse
+.settings/
+.project
+.classpath
+.metadata/
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
