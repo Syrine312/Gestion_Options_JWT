@@ -52,7 +52,11 @@ public class RessourceEtudiants {
         }
 
         List<Etudiant> liste = etudiantBusiness.getEtudiantsByOption(option);
-        return Response.ok(new EtudiantList(liste)).build();
+        List<Etudiant> xmlListe = new java.util.ArrayList<>();
+        for (Etudiant e : liste) {
+            xmlListe.add(new Etudiant(e.getIdentifiant(), e.getNom(), e.getPrenom(), null, e.getAnneeEtude(), e.getEmail()));
+        }
+        return Response.ok(new EtudiantList(xmlListe)).build();
     }
 
     // 3) Récupération d'un étudiant ayant un identifiant spécifique
