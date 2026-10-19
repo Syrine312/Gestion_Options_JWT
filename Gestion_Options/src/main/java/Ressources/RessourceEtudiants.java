@@ -10,7 +10,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
-@Secured
+//@Secured
 @Path("/etudiants")
 @Produces(MediaType.APPLICATION_JSON)
 public class RessourceEtudiants {
@@ -18,7 +18,7 @@ public class RessourceEtudiants {
     private EtudiantBusiness etudiantBusiness = new EtudiantBusiness();
     private OptionBusiness optionBusiness = new OptionBusiness();
 
-    // 1) Création d'un nouvel étudiant
+    // 1)Création d'un nouvel étudiant
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response ajouterEtudiant(Etudiant etudiant) {

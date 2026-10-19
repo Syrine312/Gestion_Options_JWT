@@ -16,7 +16,7 @@ public class JWTService {
                     .getBytes(StandardCharsets.UTF_8);
 
     // Durée de vie de l'access token
-    public static final long ACCESS_MINUTES = 1L;
+    public static final long ACCESS_MINUTES = 15L;
 
     // ===== Génération =====
     public static String generateAccessToken(String username, String issuer) {

@@ -49,10 +49,12 @@ public class Etudiant {
     }
 
     @XmlTransient
+    @com.fasterxml.jackson.annotation.JsonProperty("option")
     public Option getOption() {
         return option;
     }
 
+    @com.fasterxml.jackson.annotation.JsonProperty("option")
     public void setOption(Option option) {
         this.option = option;
     }
